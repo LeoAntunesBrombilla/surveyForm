@@ -5,116 +5,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>FreeCodeCamp Survey</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body id="main">
-    <h1 id="title">Programming Languages</h1>
-    <p id="description">
-      This survey has the objective to understand the proference regarding
-      programming languages.
-    </p>
-    <form action="home" id="survey-form">
-      <div>
-        <label for="name" id="name-label">What's your name?</label>
-        <input type="text" id="name" name="name" placeholder="name" required />
-      </div>
-      <div>
-        <label for="email" id="email-label">What's your email</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="email"
-          required
-        />
-      </div>
-      <div>
-        <label for="number" id="number-label"
-          >Number of programming languages that you're familiar with.</label
-        >
-        <input
-          type="number"
-          id="number"
-          name="number"
-          min="1"
-          max="7"
-          placeholder="n of programming languages"
-          required
-        />
-      </div>
-      <div>
-        <label for="dropdown">Whats your current occupation?</label>
-        <input
-          list="dropdown"
-          id="dropdown"
-          name="job-choice"
-          placeholder="job-choice"
-        />
-        <datalist id="dropdown">
-          <option value="Student"></option>
-          <option value="Front end Developer"></option>
-          <option value="Back end developer"></option>
-          <option value="Unemployed"></option>
-        </datalist>
-      </div>
+    <header>
+      <h1 id="title">Programming Languages</h1>
+      <p id="description">
+        This survey has the objective to understand the proference regarding
+        programming languages.
+      </p>
+    </header>
 
-      <p>Whats your code editor?</p>
-      <div>
-        <label for="Vim">Vim</label>
-        <input type="radio" id="Vim" name="editor" value="vim" />
-      </div>
-      <div>
-        <label for="Vs code">Vs Code</label>
-        <input type="radio" id="Vs code" name="editor" value="vscode" />
-      </div>
-      <div>
-        <label for="Emacs">Emacs</label>
-        <input type="radio" id="Emacs" name="editor" value="emacs" />
-      </div>
+    <main>
+      <div class="container">
+        <form action="home" id="survey-form">
+          <div>
+            <label for="name" id="name-label">What's your name?</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="name"
+              required
+            />
+          </div>
+          <div>
+            <label for="email" id="email-label">What's your email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="email"
+              required
+            />
+          </div>
+          <div>
+            <label for="number" id="number-label"
+              >N° of programming languages that you're familiar with.</label
+            >
+            <input
+              type="number"
+              id="number"
+              name="number"
+              min="1"
+              max="7"
+              placeholder="n of programming languages"
+              required
+            />
+          </div>
+          <div>
+            <label for="dropdown">Whats your current occupation?</label>
+            <input
+              list="dropdown"
+              id="dropdown"
+              name="job-choice"
+              placeholder="job-choice"
+            />
+            <datalist id="dropdown">
+              <option value="Student"></option>
+              <option value="Front end Developer"></option>
+              <option value="Back end developer"></option>
+              <option value="Unemployed"></option>
+            </datalist>
+          </div>
 
-      <p>Select the programming languages that you have a solid base on:</p>
-      <div>
-        <label for="Python">Python</label>
-        <input type="checkbox" id="Python" name="Python" value="python" />
+          <p>Whats your code editor?</p>
+          <div class="programmingBase">
+            <label for="Vim">Vim</label>
+            <input type="radio" id="Vim" name="editor" value="vim" />
+            <label for="Vs code">Vs Code</label>
+            <input type="radio" id="Vs code" name="editor" value="vscode" />
+            <label for="Emacs">Emacs</label>
+            <input type="radio" id="Emacs" name="editor" value="emacs" />
+          </div>
+
+          <p>Select the programming languages that you have a solid base on:</p>
+          <div class="programmingBase">
+            <label for="C++">C++</label>
+            <input type="checkbox" id="C++" name="C++" value="C++" />
+            <label for="Javascript">Javascript</label>
+            <input type="checkbox" id="Javascript" name="Javascript" value="javascript" />
+            <label for="PHP">PHP</label>
+            <input type="checkbox" id="PHP" name="PHP" value="PHP" />
+            <label for="Java">Java</label>
+            <input type="checkbox" id="Java" name="Java" value="java" />
+          </div>
+          
+          <div class="programmingBase">
+            <label for="C">C</label>
+            <input type="checkbox" id="C" name="C" value="C" />
+            <label for="Python">Python</label>
+            <input type="checkbox" id="Python" name="Python" value="python" />
+            <label for="Haskell">Haskell</label>
+            <input type="checkbox" id="Haskell" name="Haskell" value="haskell" />
+            <label for="Elixir">Elixir</label>
+            <input type="checkbox" id="Elixir" name="Elixir" value="elixir" />
+          </div>
+          <p>Any critics or comments, write down bellow</p>
+          <div>
+            <textarea name="comment" form="usrform" rows="8" cols="40"></textarea>
+          </div>
+          <button id="submit">Submit</button>
+        </form>
       </div>
-      <div>
-        <label for="Javascript">Javascript</label>
-        <input
-          type="checkbox"
-          id="Javascript"
-          name="Javascript"
-          value="javascript"
-        />
-      </div>
-      <div>
-        <label for="PHP">PHP</label>
-        <input type="checkbox" id="PHP" name="PHP" value="PHP" />
-      </div>
-      <div>
-        <label for="Java">Java</label>
-        <input type="checkbox" id="Java" name="Java" value="java" />
-      </div>
-      <div>
-        <label for="C">C</label>
-        <input type="checkbox" id="C" name="C" value="C" />
-      </div>
-      <div>
-        <label for="C++">C++</label>
-        <input type="checkbox" id="C++" name="C++" value="C++" />
-      </div>
-      <div>
-        <label for="Haskell">Haskell</label>
-        <input type="checkbox" id="Haskell" name="Haskell" value="haskell" />
-      </div>
-      <div>
-        <label for="Elixir">Elixir</label>
-        <input type="checkbox" id="Elixir" name="Elixir" value="elixir" />
-      </div>
-      <p>Any critics or comments, write down bellow</p>
-      <div>
-        <textarea name="comment" form="usrform"></textarea>
-      </div>
-      <button id="submit">Submit</button>
-    </form>
+    </main>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
   </body>
 </html>
